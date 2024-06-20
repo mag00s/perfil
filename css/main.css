@@ -1,0 +1,21 @@
+
+.round-image {
+  justify-content: center;
+  border-radius: 50%; /* This creates the round shape */
+  width: 150px; /* Set the width as desired */
+  height: 150px; /* Set the height as desired */
+  object-fit: cover; /* Ensures the image covers the area without being stretched */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* This will center the images horizontally */
+  align-items: center; /* This will center the images vertically */
+}
+
+/* Image styles */
+.image-container img {
+  width: 50%; /* Adjust the width as necessary */
+  height: auto; /* This will maintain the aspect ratio */
+  margin: 5px; /* This adds space between the images */
+}
