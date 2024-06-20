@@ -25,26 +25,20 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       display: flex;
-      position: relative; /* Added relative positioning */
+      flex-direction: column;
+      position: relative;
     }
 
     .round-image {
       position: absolute;
-      top: 20px;
-      left: 20px;
+      top: 20px; /* Adjust top position */
+      left: 20px; /* Adjust left position */
       border-radius: 50%;
-      width: 300px; /* Adjusted width for practical display */
-      height: 300px; /* Adjusted height for practical display */
+      width: 200px; /* Adjusted width for practical display */
+      height: 200px; /* Adjusted height for practical display */
       object-fit: cover;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
       animation: coinFlip 50s infinite;
-      margin-left: 15px;
-      margin-top: 20px;
-    }
-
-    .content {
-      flex: 1; /* Take remaining space */
-      padding-left: 340px; /* Adjusted to accommodate the profile picture */
     }
 
     .image-container {
@@ -91,22 +85,20 @@
 <body>
   <div class="container">
     <img src="./img/mifoto.jpg" alt="Mi Foto" class="round-image">
-    <div class="content">
-      <h1>Marc Urruela</h1>
-      <h2>Desarrollo Web Fullstack, Base de Datos</h2>
-      <hr>
-      <h2>Acerca de Mí</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem enim beatae ad asperiores omnis, veniam magni, illum quis excepturi voluptatem molestias aperiam aliquam sit sunt aliquid quidem eum, ab blanditiis.
-      </p>
-      <div class="image-container">
-        <a href="https://www.github.com" target="_blank">
-          <img src="./img/nuevas/github-1.svg" alt="GitHub" class="svg-icon">
-        </a>
-        <a href="https://www.linkedin.com" target="_blank">
-          <img src="./img/nuevas/linkedin.svg" alt="LinkedIn" class="svg-icon">
-        </a>
-      </div>
+    <h1>Marc Urruela</h1>
+    <h2>Desarrollo Web Fullstack, Base de Datos</h2>
+    <hr>
+    <h2>Acerca de Mí</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem enim beatae ad asperiores omnis, veniam magni, illum quis excepturi voluptatem molestias aperiam aliquam sit sunt aliquid quidem eum, ab blanditiis.
+    </p>
+    <div class="image-container">
+      <a href="https://www.github.com" target="_blank">
+        <img src="./img/nuevas/github-1.svg" alt="GitHub" class="svg-icon">
+      </a>
+      <a href="https://www.linkedin.com" target="_blank">
+        <img src="./img/nuevas/linkedin.svg" alt="LinkedIn" class="svg-icon">
+      </a>
     </div>
   </div>
 </body>
