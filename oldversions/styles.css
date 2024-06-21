@@ -1,0 +1,103 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* Light gray background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff; /* White background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden; /* Hidden overflow to show the shadow */
+  position: relative; /* Added relative positioning */
+}
+
+.round-image {
+  width: 300px; /* Adjusted width for practical display */
+  height: 300px; /* Adjusted height for practical display */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  animation: coinFlip 50s infinite;
+  margin: 20px;
+  border: 5px solid #ffd700; /* Gold border */
+}
+
+.content {
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+}
+
+.name {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: #333;
+  text-transform: uppercase; /* Uppercase name */
+}
+
+.occupation {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #ffd700; /* Gold divider */
+  margin: 20px auto;
+  width: 50%;
+}
+
+.about-me {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555; /* Darker text for better readability */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 15px; /* Increased spacing between icons */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.svg-icon {
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes coinFlip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(200deg); }
+  100% { transform: rotateY(0deg); }
+}

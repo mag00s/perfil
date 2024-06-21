@@ -4,102 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarjeta de Presentación</title>
-  <meta name="description" content="Tarjeta de presentación de Marc Urruela, Desarrollo Web Fullstack y Base de Datos.">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 800px;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      display: flex;
-      position: relative; /* Added relative positioning */
-    }
-
-    .round-image {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      border-radius: 50%;
-      width: 300px; /* Adjusted width for practical display */
-      height: 300px; /* Adjusted height for practical display */
-      object-fit: cover;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-      animation: coinFlip 50s infinite;
-      margin-left: 15px;
-      margin-top: 20px;
-    }
-
-    .content {
-      flex: 1; /* Take remaining space */
-      padding-left: 340px; /* Adjusted to accommodate the profile picture */
-    }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .image-container img {
-      width: 50px;
-      height: 50px;
-      margin: 5px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .svg-icon {
-      width: 50px;
-      height: 50px;
-      margin: 0 10px;
-      cursor: pointer;
-    }
-
-    h1, h2, p {
-      text-align: center;
-      word-wrap: break-word;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 20px auto;
-      width: 50%;
-    }
-
-    @keyframes coinFlip {
-      0% { transform: rotateY(0deg); }
-      50% { transform: rotateY(200deg); }
-      100% { transform: rotateY(0deg); }
-    }
-  </style>
+  <meta name="description" content="Tarjeta de presentación de El Chiguire Espacial, Desarrollo Web Fullstack y Base de Datos.">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <div class="container">
     <img src="./img/mifoto.jpg" alt="Mi Foto" class="round-image">
     <div class="content">
-      <h1>Marc Urruela</h1>
-      <h2>Desarrollo Web Fullstack, Base de Datos</h2>
-      <hr>
-      <h2>Acerca de Mí</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem enim beatae ad asperiores omnis, veniam magni, illum quis excepturi voluptatem molestias aperiam aliquam sit sunt aliquid quidem eum, ab blanditiis.
-      </p>
-      <div class="image-container">
+      <h1 class="name">El Chiguire Espacial</h1>
+      <h2 class="occupation">Desarrollo Web Fullstack, Base de Datos</h2>
+      <hr class="divider">
+      <div class="about-me">
+        <h3 class="section-title">Acerca de Mí</h3>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem enim beatae ad asperiores omnis, veniam magni, illum quis excepturi voluptatem molestias aperiam aliquam sit sunt aliquid quidem eum, ab blanditiis.
+        </p>
+      </div>
+      <div class="social-icons">
         <a href="https://www.github.com" target="_blank">
           <img src="./img/nuevas/github-1.svg" alt="GitHub" class="svg-icon">
         </a>
