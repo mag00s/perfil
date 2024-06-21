@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9; /* Light gray background */
+  background-color: #f9f9f9;
   color: #333;
   margin: 0;
   padding: 0;
@@ -13,30 +13,44 @@ body {
 .container {
   max-width: 800px;
   padding: 20px;
-  background-color: #fff; /* White background */
+  background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   display: flex;
-  overflow: hidden; /* Hidden overflow to show the shadow */
-  position: relative; /* Added relative positioning */
-  border: 2px solid transparent; /* Initial transparent border */
-  border-image: linear-gradient(to right, #ffd700, #f0c600); /* Gold gradient border */
-  border-image-slice: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(to right, #ffd700, #f0c600);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 
 .round-image {
-  width: 300px; /* Adjusted width for practical display */
-  height: 300px; /* Adjusted height for practical display */
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-  animation: coinFlip 50s infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  animation: coinFlip 10s infinite linear;
   margin: 20px;
-  border: 5px solid #ffd700; /* Gold border */
+  border: 5px solid #ffd700;
 }
 
 .content {
-  flex: 1; /* Take remaining space */
+  flex: 1;
   padding: 20px;
 }
 
@@ -44,20 +58,9 @@ body {
   text-align: center;
   margin-bottom: 10px;
   font-size: 32px;
-  color: #333;
-  text-transform: uppercase; /* Uppercase name */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Emboss effect */
-}
-
-.name::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  color: #ffd700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .occupation {
@@ -65,12 +68,11 @@ body {
   font-size: 18px;
   color: #666;
   margin-bottom: 20px;
-  font-weight: normal; /* Ensure normal font weight */
 }
 
 .divider {
   border: none;
-  border-top: 2px solid #ffd700; /* Gold divider */
+  border-top: 2px solid #ffd700;
   margin: 20px auto;
   width: 50%;
 }
@@ -82,14 +84,14 @@ body {
 .section-title {
   font-size: 24px;
   font-weight: bold;
-  color: #ffd700; /* Golden color for section titles */
+  color: #ffd700;
   margin-bottom: 10px;
 }
 
 .description {
   font-size: 16px;
   line-height: 1.6;
-  color: #555; /* Darker text for better readability */
+  color: #555;
 }
 
 .social-icons {
@@ -100,7 +102,7 @@ body {
 
 .social-icons a {
   display: inline-block;
-  margin: 0 15px; /* Increased spacing between icons */
+  margin: 0 10px;
   transition: transform 0.3s ease;
 }
 
@@ -115,6 +117,6 @@ body {
 
 @keyframes coinFlip {
   0% { transform: rotateY(0deg); }
-  50% { transform: rotateY(200deg); }
-  100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
 }
